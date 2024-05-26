@@ -84,7 +84,8 @@ phpunit
 #-------------------------
 # Composer
 #-------------------------
-vendor/
+/vendor
+!vendor/codeigniter4/shield
 
 #-------------------------
 # IDE / Development Files
