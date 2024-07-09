@@ -12,6 +12,9 @@ use CodeIgniter\I18n\Time;
 class ProductController extends BaseController
 {
     public $model;
+    public $current_user;
+    public $rules;
+    public $categoryController;
     public function __construct() {
         helper('auth');
         helper('form');
@@ -46,7 +49,6 @@ class ProductController extends BaseController
             'data'=>$product,
             'current_user'=>$this->current_user,
         ];
-//        print_r($arr);
         return view('admin/product/details',$arr);
     }
     
