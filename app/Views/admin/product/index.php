@@ -120,7 +120,7 @@
                             if (responseData.status === 'success') {
                                 toastr.success(responseData.message);
                                 $("#active_btn_" + id).replaceWith(`
-                                <button id="active_btn_${id}" class="btn btn-sm me-1 btn-outline-${responseData.data===1 ? 'success' : 'danger'}" data-toggle="tooltip" data-bs-placement="bottom" ${responseData.data===1 ? 'title="Active"' : 'title="Inactive"'} onclick="changeBanStatus(${id},${responseData.data})">
+                                <button id="active_btn_${id}" class="btn btn-sm me-1 btn-outline-${responseData.data===1 ? 'success' : 'danger'}" data-toggle="tooltip" data-bs-placement="bottom" ${responseData.data===1 ? 'title="Active"' : 'title="Inactive"'} onclick="changeActiveStatus(${id},${responseData.data})">
                                     ${responseData.data===1 ? '<i class="bi bi-ban"></i>' : '<i class="bi bi-ban-fill"></i>'}
                                 </button>
                             `);
